@@ -26,5 +26,6 @@ int print_binary(va_list arguments, char *buf, unsigned int ibuf);
 int print_uns_int(va_list arguments, char *buf, unsigned int ibuf);
 int print_oct(va_list arguments, char *buf, unsigned int ibuf);
 int print_hex_low(va_list arguments, char *buf, unsigned int ibuf);
+int print_hex_up(va_list arguments, char *buf, unsigned int ibuf);
 
 #endif
