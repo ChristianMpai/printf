@@ -20,5 +20,6 @@ typedef struct print
 
 int _printf(const char *format, ...);
 int print_function(const char *s, int index);
+int (*(const char *s, int index))(va_list, char *, unsigned int);
 
 #endif
