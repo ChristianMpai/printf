@@ -19,5 +19,6 @@ typedef struct print
 } print_t;
 
 int _printf(const char *format, ...);
+int print_function(const char *s, int index);
 
 #endif
