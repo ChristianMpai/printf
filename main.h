@@ -21,5 +21,6 @@ typedef struct print
 int _printf(const char *format, ...);
 int print_function(const char *s, int index);
 int (*(const char *s, int index))(va_list, char *, unsigned int);
+int print_dec_int(va_list arguments, char *buf, unsigned int ibuf);
 
 #endif
