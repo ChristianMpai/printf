@@ -48,5 +48,6 @@ int space_int(va_list arguments, char *buf, unsigned int ibuf);
 int rev_string(va_list arguments, char *buf, unsigned int ibuf);
 int print_c(va_list a __attribute__((unused)), char *buf, unsigned int i);
 int print_cc(va_list arguments, char *buf, unsigned int ibuf);
+int print_rot(va_list arguments, char *buf, unsigned int ibuf);
 
 #endif
