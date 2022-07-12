@@ -52,5 +52,6 @@ int print_rot(va_list arguments, char *buf, unsigned int ibuf);
 int num_oct(va_list arguments, char *buf, unsigned int ibuf);
 int num_hex(va_list arguments, char *buf, unsigned int ibuf);
 int num_hex_up(va_list arguments, char *buf, unsigned int ibuf);
+char *oct_array(char *bnr, char *oct);
 
 #endif
