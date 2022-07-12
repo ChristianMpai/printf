@@ -35,5 +35,6 @@ int pointer(va_list arguments, char *buf, unsigned int ibuf);
 unsigned int handle_buff(char *buf, char c, unsigned int ibuf);
 int plus_space_int(va_list arguments, char *buf, unsigned int ibuf);
 int long_int(va_list arguments, char *buf, unsigned int ibuf);
+int long_oct(va_list arguments, char *buf, unsigned int ibuf);
 
 #endif
