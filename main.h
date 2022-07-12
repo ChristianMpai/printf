@@ -49,5 +49,8 @@ int rev_string(va_list arguments, char *buf, unsigned int ibuf);
 int print_c(va_list a __attribute__((unused)), char *buf, unsigned int i);
 int print_cc(va_list arguments, char *buf, unsigned int ibuf);
 int print_rot(va_list arguments, char *buf, unsigned int ibuf);
+int num_oct(va_list arguments, char *buf, unsigned int ibuf);
+int num_hex(va_list arguments, char *buf, unsigned int ibuf);
+int num_hex_up(va_list arguments, char *buf, unsigned int ibuf);
 
 #endif
