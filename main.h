@@ -30,5 +30,6 @@ int print_hex_up(va_list arguments, char *buf, unsigned int ibuf);
 int print_buffer(char *buf, unsigned int nbuf);
 int print_string(va_list arguments, char *buf, unsigned int ibuf);
 int print_s_null(va_list arguments, char *buf, unsigned int ibuf);
+int pointer(va_list arguments, char *buf, unsigned int ibuf);
 
 #endif
