@@ -55,5 +55,6 @@ int num_hex_up(va_list arguments, char *buf, unsigned int ibuf);
 char *oct_array(char *bnr, char *oct);
 char *short_oct_array(char *bnr, char *oct);
 char *long_oct_array(char *bnr, char *oct);
+char *hex_array(char *bnr, char *hex, int isupp, int limit);
 
 #endif
