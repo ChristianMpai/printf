@@ -45,5 +45,7 @@ int short_uns_int(va_list arguments, char *buf, unsigned int ibuf);
 int short_hex(va_list arguments, char *buf, unsigned int ibuf);
 int short_hex_up(va_list arguments, char *buf, unsigned int ibuf);
 int space_int(va_list arguments, char *buf, unsigned int ibuf);
+int rev_string(va_list arguments, char *buf, unsigned int ibuf);
+int print_c(va_list a __attribute__((unused)), char *buf, unsigned int i);
 
 #endif
