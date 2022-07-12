@@ -43,5 +43,6 @@ int short_int(va_list arguments, char *buf, unsigned int ibuf);
 int short_oct(va_list arguments, char *buf, unsigned int ibuf);
 int short_uns_int(va_list arguments, char *buf, unsigned int ibuf);
 int short_hex(va_list arguments, char *buf, unsigned int ibuf);
+int short_hex_up(va_list arguments, char *buf, unsigned int ibuf);
 
 #endif
