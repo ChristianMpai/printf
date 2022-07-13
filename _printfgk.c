@@ -1,27 +1,28 @@
 #include "main.h"
-
 /**
- * _printf - produces output according to a format.
- * @format: input string.
- *
- * Return: number of chars printed.
+ * _printf - printf function
+ * @format: const char pointer
+ * Return: b_len
  */
 int _printf(const char *format, ...)
 {
-	unsigned int i = 0, len = 0, ibuf = 0;
+	int (*pfunc)(va_list, flags_t *);
+	const char *p;
 	va_list arguments;
-	int (*function)(va_list, char *, unsigned int);
-	char *buffer;
+	flags_t flags = {0, 0, 0};
 
-	va_start(arguments, format), buffer = malloc(sizeof(char) * 1024);
-	if (!format || !buffer || (format[i] == '%' && !format[i + 1]))
+	register int count = 0;
+
+	va_start(arguments, format);
+	if (!format || (format[0] == '%' && !format[1]))
 		return (-1);
-	if (!format[i])
-		return (0);
-	for (i = 0; format && format[i]; i++)
+	if (format[0] == '%' && format[1] == ' ' && !format[2])
+		return (-1);
+	for (p = format; *p; p++)
 	{
-		if (format[i] == '%')
+		if (*p == '%')
 		{
+<<<<<<< HEAD
 			if (format[i + 1] == '\0')
 			{	print_buffer(buffer, ibuf), free(buffer), va_end(arguments);
 				return (-1);
@@ -48,4 +49,24 @@ int _printf(const char *format, ...)
 	}
 	print_buffer(buffer, ibuf), free(buffer), va_end(arguments);
 	return (len);
+=======
+			p++;
+			if (*p == '%')
+			{
+				count += _putchar('%');
+				continue;
+			}
+			while (get_flag(*p, &flags))
+				p++;
+			pfunc = get_print(*p);
+			count += (pfunc)
+				? pfunc(arguments, &flags)
+				: _printf("%%%c", *p);
+		} else
+			count += _putchar(*p);
+	}
+	_putchar(-1);
+	va_end(arguments);
+	return (count);
+>>>>>>> refs/remotes/origin/main
 }
