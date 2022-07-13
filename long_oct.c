@@ -26,16 +26,16 @@ int long_oct(va_list arguments, char *buf, unsigned int ibuf)
 	}
 
 	binary = malloc(sizeof(char) * (64 + 1));
-	binary = fill_binary_array(binary, int_input, isnegative, 64);
+	binary = binary_arr(binary, int_input, isnegative, 64);
 	octal = malloc(sizeof(char) * (22 + 1));
-	octal = fill_long_oct_array(binary, octal);
+	octal = long_oct_array(binary, octal);
 	for (first_digit = i = count = 0; octal[i]; i++)
 	{
 		if (octal[i] != '0' && first_digit == 0)
 			first_digit = 1;
 		if (first_digit)
 		{
-			ibuf = handl_buf(buf, octal[i], ibuf);
+			ibuf = handle_buff(buf, octal[i], ibuf);
 			count++;
 		}
 	}

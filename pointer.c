@@ -22,7 +22,7 @@ int pointer(va_list arguments, char *buf, unsigned int ibuf)
 	if (add == NULL)
 	{
 		for (i = 0; nill[i]; i++)
-			ibuf = handl_buf(buf, nill[i], ibuf);
+			ibuf = handle_buff(buf, nill[i], ibuf);
 		return (5);
 	}
 	int_input = (intptr_t)add;
@@ -33,18 +33,18 @@ int pointer(va_list arguments, char *buf, unsigned int ibuf)
 		isnegative = 1;
 	}
 	binary = malloc(sizeof(char) * (64 + 1));
-	binary = fill_binary_array(binary, int_input, isnegative, 64);
+	binary = binary_arr(binary, int_input, isnegative, 64);
 	hexadecimal = malloc(sizeof(char) * (16 + 1));
-	hexadecimal = fill_hex_array(binary, hexadecimal, 0, 16);
-	ibuf = handl_buf(buf, '0', ibuf);
-	ibuf = handl_buf(buf, 'x', ibuf);
+	hexadecimal = hex_array(binary, hexadecimal, 0, 16);
+	ibuf = handle_buff(buf, '0', ibuf);
+	ibuf = handle_buff(buf, 'x', ibuf);
 	for (first_digit = i = count = 0; hexadecimal[i]; i++)
 	{
 		if (hexadecimal[i] != '0' && first_digit == 0)
 			first_digit = 1;
 		if (first_digit)
 		{
-			ibuf = handl_buf(buf, hexadecimal[i], ibuf);
+			ibuf = handle_buff(buf, hexadecimal[i], ibuf);
 			count++;
 		}
 	}

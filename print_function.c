@@ -9,7 +9,7 @@
 int print_function(const char *s, int index)
 {
 	print_t pr[] = {
-		{"c", print_cc}, {"s", print_string}, {"i", print_dec_int},
+		{"c", print_cc}, {"s", print_s_null}, {"i", print_dec_int},
 		{"d", print_dec_int}, {"b", print_binary}, {"u", print_uns_int},
 		{"o", print_oct}, {"x", print_hex_low}, {"X", print_hex_up},
 		{"S", print_string}, {"p", pointer}, {"li", long_int},

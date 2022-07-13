@@ -26,7 +26,7 @@ int num_oct(va_list arguments, char *buf, unsigned int ibuf)
 	}
 	ibuf = handle_buff(buf, '0', ibuf);
 	binary = malloc(sizeof(char) * (32 + 1));
-	binary = binary_array(binary, int_input, isnegative, 32);
+	binary = binary_arr(binary, int_input, isnegative, 32);
 	octal = malloc(sizeof(char) * (11 + 1));
 	octal = oct_array(binary, octal);
 	for (first_digit = i = count = 0; octal[i]; i++)

@@ -26,7 +26,7 @@ int short_hex_up(va_list arguments, char *buf, unsigned int ibuf)
 	}
 
 	binary = malloc(sizeof(char) * (16 + 1));
-	binary = binary_array(binary, int_input, isnegative, 16);
+	binary = binary_arr(binary, int_input, isnegative, 16);
 	hexadecimal = malloc(sizeof(char) * (4 + 1));
 	hexadecimal = hex_array(binary, hexadecimal, 1, 4);
 
@@ -36,7 +36,7 @@ int short_hex_up(va_list arguments, char *buf, unsigned int ibuf)
 			first_digit = 1;
 		if (first_digit)
 		{
-			ibuf = handl_buf(buf, hexadecimal[i], ibuf);
+			ibuf = handle_buff(buf, hexadecimal[i], ibuf);
 			count++;
 		}
 	}

@@ -23,7 +23,7 @@ int short_uns_int(va_list arguments, char *buf, unsigned int ibuf)
 
 	for (i = 0; div > 0; div /= 10, i++)
 	{
-		ibuf = handl_buf(buf, ((int_in / div) % 10) + '0', ibuf);
+		ibuf = handle_buff(buf, ((int_in / div) % 10) + '0', ibuf);
 	}
 	return (i);
 }
