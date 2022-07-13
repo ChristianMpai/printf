@@ -1,18 +1,18 @@
 #include "main.h"
 
 /**
- * print_dec_int - prints integers.
+ * long_int - prints a long int.
  * @arguments: input string
  * @buf: buffer pointer
  * @ibuf: index for buffer pointer
  * Return: number of chars printed.
  */
-int print_dec_int(va_list arguments, char *buf, unsigned int ibuf)
+int long_int(va_list arguments, char *buf, unsigned int ibuf)
 {
-	int int_input;
-	unsigned int int_in, int_temp, i, div, isneg;
+	long int int_input;
+	unsigned long int int_in, int_temp, i, div, isneg;
 
-	int_input = va_arg(arguments, int);
+	int_input = va_arg(arguments, long int);
 	isneg = 0;
 	if (int_input < 0)
 	{
@@ -27,13 +27,11 @@ int print_dec_int(va_list arguments, char *buf, unsigned int ibuf)
 
 	int_temp = int_in;
 	div = 1;
-
 	while (int_temp > 9)
 	{
 		div *= 10;
 		int_temp /= 10;
 	}
-
 	for (i = 0; div > 0; div /= 10, i++)
 	{
 		ibuf = handle_buff(buf, ((int_in / div) % 10) + '0', ibuf);
