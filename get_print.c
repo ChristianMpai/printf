@@ -27,8 +27,13 @@ int (*get_print(const char *s, int index))(va_list, char *, unsigned int)
 		{"+X", print_upx}, {" i", prinsint},
 		{" d", prinsint}, {" u", print_unt},
 		{" o", print_oct}, {" x", print_hex},
-		
-		{NULL, NULL},
+		{"c", print_chr}, {"s", print_str},
+		{" X", print_upx}, {"R", print_rot},
+		{"r", print_rev}, {"%", print_prg},
+		{"l", print_prg}, {"h", print_prg},
+		{" +i", prinpint}, {" +d", prinpint},
+		{"+ i", prinpint}, {"+ d", prinpint},
+		{" %", print_prg}, {NULL, NULL},
 	};
 	int i = 0, j = 0, first_index;
 
