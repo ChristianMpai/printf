@@ -9,14 +9,14 @@ int ev_print(const char *s, int index)
 {
 	print_t pr[] = {
 		{"c", print_chr}, {"s", print_vstr}, {"i", print_int},
-		{"d", print_int}, {"b", print_binary}, {"u", print_unt},
+		{"d", print_int}, {"b", print_bnr}, {"u", print_unt},
 		{"o", print_oct}, {"x", print_hex}, {"X", print_upx},
-		{"S", print_vstr}, {"p", print_add}, {"li", prinlint},
+		{"S", print_chr}, {"p", print_add}, {"li", prinlint},
 		{"ld", prinlint}, {"lu", prinlunt}, {"lo", prinloct},
 		{"lx", prinlhex}, {"lX", prinlupx}, {"hi", prinhint},
 		{"hd", prinhint}, {"hu", prinhunt}, {"ho", prinhoct},
 		{"hx", prinhhex}, {"hX", prinhupx}, {"#o", prinnoct},
-		{"#x", prinnhex}, {"#X", prinnupx}, {"#i", print_int},
+		{"#x", prinlhex}, {"#X", prinlupx}, {"#i", print_int},
 		{"#d", print_int}, {"#u", print_unt}, {"+i", prinpint},
 		{"+d", prinpint}, {"+u", print_unt}, {"+o", print_oct},
 		{"+x", print_hex}, {"+X", print_upx}, {" i", prinsint},
