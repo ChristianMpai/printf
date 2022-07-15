@@ -1,4 +1,4 @@
-#include "main"
+#include "main.h"
 /**
  * _short_oct_array - calculates a short octal number
  *
