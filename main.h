@@ -40,4 +40,5 @@ int prinsint(va_list arguments, char *buf, unsigned int ibuf);
 int prinnoct(va_list arguments, char *buf, unsigned int ibuf);
 int prinhhex(va_list arguments, char *buf, unsigned int ibuf);
 int prinhupx(va_list arguments, char *buf, unsigned int ibuf);
+
 #endif
