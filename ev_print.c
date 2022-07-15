@@ -11,7 +11,7 @@ int ev_print(const char *s, int index)
 		{"c", print_chr}, {"s", print_str}, {"i", print_int},
 		{"d", print_int}, {"b", print_bnr}, {"u", print_unt},
 		{"o", print_oct}, {"x", print_hex}, {"X", print_upx},
-		{"S", print_usr}, {"p", print_add}, {"li", prinlint},
+		{"S", print_vstr}, {"p", print_add}, {"li", prinlint},
 		{"ld", prinlint}, {"lu", prinlunt}, {"lo", prinloct},
 		{"lx", prinlhex}, {"lX", prinlupx}, {"hi", prinhint},
 		{"hd", prinhint}, {"hu", prinhunt}, {"ho", prinhoct},
