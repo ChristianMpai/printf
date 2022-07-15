@@ -9,7 +9,7 @@ int (*get_print(const char *s, int index))(va_list, char *, unsigned int)
 {
 	print_t pr[] = {
 		{"i", print_int}, {"d", print_int},
-		{"b", print_binary}, {"u", print_unt},
+		{"b", print_bnr}, {"u", print_unt},
 		{"o", print_oct}, {"x", print_hex},
 		{"X", print_upx}, {"S", print_vstr},
 		{"p", print_add}, {"li", prinlint},
@@ -19,7 +19,7 @@ int (*get_print(const char *s, int index))(va_list, char *, unsigned int)
 		{"hd", prinhint}, {"hu", prinhunt},
 		{"ho", prinhoct}, {"hx", prinhhex},
 		{"hX", prinhupx}, {"#o", prinnoct},
-		{"#x", prinnhex}, {"#X", prinnupx},
+		{"#x", prinlhex}, {"#X", prinlupx},
 		{"#i", print_int}, {"#d", print_int},
 		{"#u", print_unt}, {"+i", prinpint},
 		{"+d", prinpint}, {"+u", print_unt},
