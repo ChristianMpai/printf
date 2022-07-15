@@ -9,6 +9,8 @@ int (*get_print(const char *s, int index))(va_list, char *, unsigned int)
 {
 	print_t pr[] = {
 		{"i", print_int}, {"d", print_int},
+		{"b", print_bnr}, {"u", print_unt},
+		{"o", print_oct}, {"x", print_hex},
 		{NULL, NULL},
 	};
 	int i = 0, j = 0, first_index;
