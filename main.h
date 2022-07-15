@@ -57,6 +57,5 @@ int print_chr(va_list arguments, char *buf, unsigned int ibuf);
 int print_rev(va_list arguments, char *buf, unsigned int ibuf);
 int print_rot(va_list arguments, char *buf, unsigned int ibuf);
 int print_str(va_list arguments, char *buf, unsigned int ibuf);
-int field_width(const char *format, int *i, va_list list);
 
 #endif
