@@ -50,5 +50,7 @@ int prinhint(va_list arguments, char *buf, unsigned int ibuf);
 int prinhoct(va_list arguments, char *buf, unsigned int ibuf);
 int prinhhex(va_list arguments, char *buf, unsigned int ibuf);
 int prinhupx(va_list arguments, char *buf, unsigned int ibuf);
+char *long_oct_array(char *bnr, char *oct);
+char *short_oct_array(char *bnr, char *oct);
 
 #endif
