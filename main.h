@@ -36,5 +36,4 @@ char *hex_array(char *bnr, char *hex, int isupp, int limit);
 int print_vstr(va_list arguments, char *buf, unsigned int ibuf);
 int print_add(va_list arguments, char *buf, unsigned int ibuf);
 
-
 #endif
