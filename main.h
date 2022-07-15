@@ -28,5 +28,7 @@ int print_int(va_list arguments, char *buf, unsigned int ibuf);
 int print_binary(va_list arguments, char *buf, unsigned int ibuf);
 char *binary_array(char *binary, long int int_in, int isneg, int limit);
 int print_unt(va_list arguments, char *buf, unsigned int ibuf);
+int print_oct(va_list arguments, char *buf, unsigned int ibuf);
+char *oct_array(char *bnr, char *oct);
 
 #endif
