@@ -24,5 +24,11 @@ int print_buf(char *buf, unsigned int nbuf);
 unsigned int handle_buf(char *buf, char c, unsigned int ibuf);
 int ev_print(const char *s, int index);
 int (*get_print(const char *s, int index))(va_list, char *, unsigned int);
+int print_int(va_list arguments, char *buf, unsigned int ibuf);
+int print_binary(va_list arguments, char *buf, unsigned int ibuf);
+char *binary_array(char *binary, long int int_in, int isneg, int limit);
+int print_unt(va_list arguments, char *buf, unsigned int ibuf);
+int print_oct(va_list arguments, char *buf, unsigned int ibuf);
+char *oct_array(char *bnr, char *oct);
 
 #endif
